@@ -1,0 +1,15 @@
+{
+  "name": "piku",
+  "description": "The Piku plugin for Claude Code",
+  "owner": {
+    "name": "Piku",
+    "email": "hello@usepiku.com"
+  },
+  "plugins": [
+    {
+      "name": "piku",
+      "source": "./",
+      "description": "Find creators and read their Rate Cards, and for creators: draft quotes and invoices, check Deals and design your Piku page from Claude."
+    }
+  ]
+}

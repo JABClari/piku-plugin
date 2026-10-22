@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "piku": {
+      "type": "http",
+      "url": "https://usepiku.com/mcp"
+    }
+  }
+}

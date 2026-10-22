@@ -1,0 +1,20 @@
+{
+  "name": "piku",
+  "displayName": "Piku",
+  "version": "1.0.0",
+  "description": "Find creators and read their Rate Cards, and for creators: draft quotes and invoices, check Deals and design your Piku page from Claude.",
+  "author": {
+    "name": "Piku",
+    "email": "hello@usepiku.com",
+    "url": "https://usepiku.com"
+  },
+  "homepage": "https://usepiku.com",
+  "repository": "https://github.com/JABClari/piku-plugin",
+  "license": "MIT",
+  "keywords": ["piku", "rate-card", "invoices", "quotes", "creators", "freelance", "mcp"],
+  "icon": "./icon.png",
+  "documentationUrl": "https://usepiku.com/claude",
+  "supportUrl": "https://github.com/JABClari/piku-plugin/issues",
+  "privacyPolicyUrl": "https://usepiku.com/privacy",
+  "termsOfServiceUrl": "https://usepiku.com/terms"
+}

@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+.mcpb-cache/
+node_modules/
+*.log
