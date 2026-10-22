@@ -2,7 +2,7 @@
   "name": "piku",
   "description": "The Piku plugin for Claude Code",
   "owner": {
-    "name": "Piku",
+    "name": "Sirius Arc",
     "email": "hello@usepiku.com"
   },
   "plugins": [
