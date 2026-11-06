@@ -51,7 +51,8 @@ For creators, on their own account:
 - `create_quote`, `create_invoice`: prepare a Draft. Nothing is sent
 - `send_draft`: send a Draft, only after you say yes to it in the chat
 - `list_invoices`, `get_invoice`: who has paid, what is due or overdue
-- `get_page`, `design_page`, `list_page_drafts`: prepare a new look for your page. Nothing changes until you apply it in Piku
+- `get_events`, `get_wallet`: ticket sales and check-ins for your events, your balance and withdrawals
+- `get_page`, `design_page`, `list_page_drafts`: prepare a new look for your page, including groups, Rate buttons and your Portfolio. Nothing changes until you apply it in Piku
 
 Claude can never accept a quote, mark an invoice paid, cancel a Deal or move money.
 

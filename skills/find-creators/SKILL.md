@@ -45,7 +45,7 @@ Use `niche`, `location` and `platform` (instagram, youtube, tiktok, other) from 
 
 ### Read a Rate Card
 
-Call `get_rate_card` before recommending a specific Rate. Check `visibility`: `full` shows prices, `from_price` shows starting prices, `request_only` shows none. `price_kind` says what the numbers mean: `fixed`, `from`, `range` or `hidden`. A page with `status: "opening_soon"` has no Rates to show yet.
+Call `get_rate_card` before recommending a specific Rate. Check `visibility`: `full` shows prices, `from_price` shows starting prices, `request_only` shows none. `price_kind` says what the numbers mean: `fixed`, `from` or `range`. `quote` ("Ask for a quote") means the creator wants to be asked for a quote: there is no price, so send a request with the brief and the creator replies with one. `hidden` means the creator keeps prices on request. A page with `status: "opening_soon"` has no Rates to show yet.
 
 ### Request
 
