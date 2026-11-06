@@ -52,7 +52,7 @@ For creators, on their own account:
 - `send_draft`: send a Draft, only after you say yes to it in the chat
 - `list_invoices`, `get_invoice`: who has paid, what is due or overdue
 - `get_events`, `get_wallet`: ticket sales and check-ins for your events, your balance and withdrawals
-- `get_page`, `design_page`, `list_page_drafts`: prepare a new look for your page, including groups, Rate buttons and your Portfolio. Nothing changes until you apply it in Piku
+- `get_page`, `design_page`, `list_page_drafts`: prepare a new look for your page, including a Page style with your colours, groups, Rate buttons and your Portfolio. Nothing changes until you apply it in Piku
 
 Claude can never accept a quote, mark an invoice paid, cancel a Deal or move money.
 
@@ -61,6 +61,7 @@ Claude can never accept a quote, mark an invoice paid, cancel a Deal or move mon
 - `.mcp.json`: one remote MCP server, `https://usepiku.com/mcp`. Sign-in uses OAuth with Piku. The plugin holds no keys and runs nothing on your computer.
 - `skills/find-creators`: how Claude searches, reads Rate Cards and sends requests.
 - `skills/creator-tools`: how Claude drafts quotes and invoices, reads Deals and designs your page, and the rule that nothing is sent without your yes.
+- `skills/page-styles`: when you ask for a new page design, Claude offers three styles (Front Row, On Air, Keynote), asks for your colours, and drafts the page from your own links, Rates and events.
 
 The plugin only talks to usepiku.com, and only when Claude calls a Piku tool.
 

@@ -9,6 +9,7 @@
     {
       "name": "piku",
       "source": "./",
+      "version": "1.2.0",
       "description": "Find creators and read their Rate Cards, and for creators: draft quotes and invoices, check Deals, events and your wallet, and design your Piku page from Claude."
     }
   ]
