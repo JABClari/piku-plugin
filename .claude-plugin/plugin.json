@@ -1,7 +1,7 @@
 {
   "name": "piku",
   "displayName": "Piku",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Find creators and read their Rate Cards, and for creators: draft quotes and invoices, check Deals, events and your wallet, and design your Piku page from Claude.",
   "author": {
     "name": "Sirius Arc",

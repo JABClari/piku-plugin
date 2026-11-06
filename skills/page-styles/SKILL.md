@@ -18,7 +18,7 @@ Use this when a creator asks you to design their Piku page. Each style is taken 
 4. Call `design_page` with:
    - `style`: the style's id. It fills the theme, button colour, shape and alignment you leave out.
    - `look.palette`: three colours like `#4A2073`. They are the cover glow, left to right. The first also colours the main ask (the first Rate button under the bio, and event buttons) and is the button colour unless you give `button_colour`. Text on them is picked for contrast.
-   - The style's `recipe`, arranged from THEIR page: `sections`, `groups` (Row for videos, List for the rest), `rate_buttons`, `portfolio`, `links_order`.
+   - The style's `recipe`, arranged from THEIR page: `sections`, `groups` (Row for videos, List for the rest), `rate_buttons`, `portfolio`, `links_order`, and `shows` for social profiles (On Air wants the show's own profiles as buttons: `show: button`).
 5. Show the changes and the `preview_url`. Say nothing is live until they apply it in the page builder. Picking a theme there later goes back to the theme's own glow.
 
 ## Rules
@@ -26,5 +26,4 @@ Use this when a creator asks you to design their Piku page. Each style is taken 
 - Never invent links, numbers, Rates or events. Leave out a part of the recipe they do not have, and say what they could add.
 - Only add links they gave you, as https addresses.
 - Rate buttons only open a Rate's request sheet; prices never change here.
-- `design_page` cannot switch a link between icon and button. When a style wants a profile as a button (On Air), tell them to pick Button only on that link in the page builder.
 - Never say the page was updated. A new design replaces their open one.
