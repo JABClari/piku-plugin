@@ -27,7 +27,7 @@ They can untick sending, and disconnect any time in Settings > Agents. A connect
 | `get_deal` | read | `{deal_id}`: a Deal id, a `draft_id`, or a brand's `request_id` |
 | `list_invoices` | read | `{client?, status?: due, overdue, paid or void, limit?}` |
 | `get_invoice` | read | `{invoice}`, like INV-0042 |
-| `create_quote` | draft | `{client: {name, email, phone?, phone_country?}, title, currency, lines: [{description, unit_price, quantity?, note?, from?}], options?: one_off, monthly, quarterly or annual, lines_per?: month or quarter, due_days?, split? or deposit?, send_by?}` |
+| `create_quote` | draft | `{client: {name, email, phone?, phone_country?}, title, currency, lines: [{description, unit_price, quantity?, note?, from?, one_time?}], options?: one_off, monthly, quarterly or annual, lines_per?: month or quarter, due_days?, split? or deposit?, send_by?}` |
 | `create_invoice` | draft | `{client, title, currency, lines, split? or deposit?, send_by?, brief?}` |
 | `send_draft` | send | `{draft_id}` |
 | `get_events` | read | `{status?: draft, on_sale, ended or cancelled, limit?}` |
@@ -43,6 +43,7 @@ Amounts are strings in major units with the currency, like `"250.00"` and `"USD"
 - A quote can offer up to three billing options (one-off, monthly, quarterly, annual). An invoice is paid in full, split 50/50 or 30/70, or with a deposit of the creator's choosing.
 - The client's email is where the link goes. If the creator has not given it, ask before drafting. If they would rather send it themselves, use `send_by: "self"` and they download the PDF from Piku.
 - Lines marked `from` are a base price that may rise; they change no maths.
+- A quote Line with `one_time: true` (a setup fee) is billed once, at its own price, on the first invoice of a repeating option, and left off every later one. On one-off it changes nothing.
 
 ### The Draft and the confirm rule
 
