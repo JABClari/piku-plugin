@@ -34,7 +34,7 @@ These tools need no sign-in. Call each tool with its argument object.
 | --- | --- |
 | `search_creators` | `{niche?, location?, platform?, max_from_price?: {amount, currency}, cursor?}` |
 | `get_rate_card` | `{handle}` |
-| `submit_request` | `{handle, rate_id, brand: {name, email}, brief}` |
+| `submit_request` | `{handle, rate_id, brand: {name, email}, brief, answers?: {question id: answer}}` |
 | `get_deal` | `{deal_id}` |
 
 Copy returned handles, Rate ids and URLs exactly. A Rate keeps its id when the creator renames it.
@@ -45,11 +45,11 @@ Use `niche`, `location` and `platform` (instagram, youtube, tiktok, other) from 
 
 ### Read a Rate Card
 
-Call `get_rate_card` before recommending a specific Rate. Check `visibility`: `full` shows prices, `from_price` shows starting prices, `request_only` shows none. `price_kind` says what the numbers mean: `fixed`, `from` or `range`. `quote` ("Ask for a quote") means the creator wants to be asked for a quote: there is no price, so send a request with the brief and the creator replies with one. `hidden` means the creator keeps prices on request. A page with `status: "opening_soon"` has no Rates to show yet.
+Call `get_rate_card` before recommending a specific Rate. Check `visibility`: `full` shows prices, `from_price` shows starting prices, `request_only` shows none. `price_kind` says what the numbers mean: `fixed`, `from` or `range`. `quote` ("Ask for a quote") means the creator wants to be asked for a quote: there is no price, so send a request with the brief and the creator replies with one. `hidden` means the creator keeps prices on request. A page with `status: "opening_soon"` has no Rates to show yet. A Rate may list `questions` the creator asks on every request (`id`, `label`, `kind` text or choice, `options`, `required`).
 
 ### Request
 
-Confirm the creator, Rate, brand name, contact email and a one-line brief with the user, then call `submit_request`. Piku emails the brand a link to confirm. The request reaches the creator's Deals only after the brand confirms, and the link works for 48 hours. Tell the user to look for the email, and keep the `request_id`.
+Confirm the creator, Rate, brand name, contact email and a one-line brief with the user, then call `submit_request`. When the Rate has `questions`, ask the user each one and pass `answers` by question id: every required one, and a choice exactly as one of its options. Never send an ID number or ID photo; an ID check happens on a call with the creator. Piku emails the brand a link to confirm. The request reaches the creator's Deals only after the brand confirms, and the link works for 48 hours. Tell the user to look for the email, and keep the `request_id`.
 
 ### Check a request
 

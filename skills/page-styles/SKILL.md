@@ -25,5 +25,6 @@ Use this when a creator asks you to design their Piku page. Each style is taken 
 
 - Never invent links, numbers, Rates or events. Leave out a part of the recipe they do not have, and say what they could add.
 - Only add links they gave you, as https addresses.
+- A developer's GitHub fits any style as a `github` widget (`{type: "github", value: "<username>"}`; Full near the top for Keynote, Compact in a list otherwise). Only an account they gave you.
 - Rate buttons only open a Rate's request sheet; prices never change here.
 - Never say the page was updated. A new design replaces their open one.
