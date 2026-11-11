@@ -2,7 +2,7 @@
 
 ![Piku](icon.png)
 
-[Piku](https://usepiku.com) gives anyone who sells a service one page with a Rate Card, plus quotes, invoices and Deals to get paid. This plugin connects Claude Code to Piku, so you can find creators and send requests, or run your own Piku account from a chat.
+[Piku](https://usepiku.com) gives anyone who sells a service one page with a Rate Card, plus quotes, invoices and Deals to get paid. This plugin connects Claude Code to Piku, so you can find people and places to book and send requests, or run your own Piku account from a chat.
 
 ## Install
 
@@ -28,7 +28,7 @@ claude plugin install piku@piku
 
 ## Sign in
 
-Searching creators and reading Rate Cards works without an account. To use your own Piku account (Deals, quotes, invoices, your page):
+Searching and reading pages works without an account. To use your own Piku account (Deals, quotes, invoices, your page):
 
 1. Run `/mcp` in Claude Code.
 2. Choose `piku` and select Authenticate.
@@ -40,8 +40,8 @@ You can disconnect any time in Piku under Settings > Agents.
 
 For anyone, no sign-in:
 
-- `search_creators`: find creators by niche, location, platform and starting price
-- `get_rate_card`: read a creator's Rates, what each includes, and their media kit
+- `search`: find creators and businesses by what they do, place, category, language, a point on the map and starting price (the old name `search_creators` works until 9 February 2027)
+- `get_page_info`: read a page: its Rates, how each is charged and whether it takes requests now, or an unclaimed business's public facts and channels (the old name `get_rate_card` works until 9 February 2027)
 - `submit_request`: send a brand's request on one Rate. Piku emails the brand to confirm first
 - `get_deal`: check where a request stands
 
@@ -59,8 +59,8 @@ Claude can never accept a quote, mark an invoice paid, cancel a Deal or move mon
 ## What is included
 
 - `.mcp.json`: one remote MCP server, `https://usepiku.com/mcp`. Sign-in uses OAuth with Piku. The plugin holds no keys and runs nothing on your computer.
-- `skills/find-creators`: how Claude searches, reads Rate Cards and sends requests.
-- `skills/creator-tools`: how Claude drafts quotes and invoices, reads Deals and designs your page, and the rule that nothing is sent without your yes.
+- `skills/find-on-piku`: how Claude finds people and places, reads pages and sends requests.
+- `skills/owner-tools`: how Claude drafts quotes and invoices, reads Deals and designs your page, and the rule that nothing is sent without your yes.
 - `skills/page-styles`: when you ask for a new page design, Claude offers three styles (Front Row, On Air, Keynote), asks for your colours, and drafts the page from your own links, Rates and events.
 
 The plugin only talks to usepiku.com, and only when Claude calls a Piku tool.

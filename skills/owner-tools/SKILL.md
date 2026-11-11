@@ -1,6 +1,6 @@
 ---
-name: creator-tools
-description: Works on a creator's own Piku account. Drafts quotes and invoices for their clients, sends a Draft only after the creator says yes, lists and reads Deals and invoices, reads their events and wallet, and prepares designs for their public Piku page. Use when the user sells a service and wants to quote, invoice, check who has paid, see ticket sales or their balance, or change their Piku page.
+name: owner-tools
+description: Works on a page owner's own Piku account (a creator or a business). Drafts quotes and invoices for their clients, sends a Draft only after the creator says yes, lists and reads Deals and invoices, reads their events and wallet, and prepares designs for their public Piku page. Use when the user sells a service and wants to quote, invoice, check who has paid, see ticket sales or their balance, or change their Piku page.
 ---
 
 # Your Piku account in Claude
