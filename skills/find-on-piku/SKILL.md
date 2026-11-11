@@ -74,7 +74,8 @@ Every Piku page is readable directly:
 
 To browse everything at once, the directories list every public page by country:
 
-- `https://usepiku.com/places.json` (or `.md`): every public business page (hotels, guesthouses, studios...)
+- `https://usepiku.com/places.json` (or `.md`): every public place (hotels, guesthouses, lodges, venues...)
+- `https://usepiku.com/businesses.json` (or `.md`): businesses that claimed their page and are not places
 - `https://usepiku.com/people.json` (or `.md`): every live creator page
 
 Each entry gives the page's address and its own `.json` twin.
