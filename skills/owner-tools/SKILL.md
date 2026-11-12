@@ -3,13 +3,13 @@ name: owner-tools
 description: Works on a page owner's own Piku account (a creator or a business). Drafts quotes and invoices for their clients, sends a Draft only after the creator says yes, lists and reads Deals and invoices, reads their events and wallet, and prepares designs for their public Piku page. Use when the user sells a service and wants to quote, invoice, check who has paid, see ticket sales or their balance, or change their Piku page.
 ---
 
-# Your Piku account in Claude
+# Your Piku account
 
 Use this when the person you help is a creator billing their own clients, or changing their public Piku page. A creator sells any service: content, tours, code, design, marketing, coaching. Use their words, not Piku's field names.
 
 ## Sign in
 
-These tools act on one creator's account, so the first one you call asks them to sign in to Piku. In Claude Code they run `/mcp`, choose `piku` and authenticate. On Piku they choose what you may do:
+These tools act on one creator's account, so the first one you call asks them to sign in to Piku. In Claude Code they run `/mcp`, choose `piku` and authenticate; in ChatGPT, ChatGPT asks them to connect Piku. On Piku they choose what you may do:
 
 - `billing:read`: Deals, invoices, events and wallet
 - `billing:draft`: make Drafts
@@ -56,7 +56,7 @@ You can never accept a quote, mark an invoice paid, change or stop a Schedule, c
 
 ## The invoice fee
 
-Piku's fee is 1% of each paid invoice, never more than $10, paid by the client by default; the creator can choose to cover it in Settings. The client sees it as a Service fee on the invoice. The payment provider's processing fee is separate and shown at checkout. Invoices are in the creator's currency. The client pays in that currency where checkout takes it, otherwise in USD at the day's rate; the wallet keeps the invoice's currency.
+Piku adds a service fee to each paid invoice, shown on the invoice. The client pays it by default; the creator can choose to cover it in Settings. The client sees it as a Service fee on the invoice. The payment provider's processing fee is separate and shown at checkout. Invoices are in the creator's currency. The client pays in that currency where checkout takes it, otherwise in USD at the day's rate; the wallet keeps the invoice's currency.
 
 ## Deals and invoices
 

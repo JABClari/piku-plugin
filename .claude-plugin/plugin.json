@@ -22,7 +22,7 @@
     "freelance",
     "mcp"
   ],
-  "icon": "./icon.png",
+  "icon": "./assets/icon.png",
   "documentationUrl": "https://usepiku.com/claude",
   "supportUrl": "https://github.com/JABClari/piku-plugin/issues",
   "privacyPolicyUrl": "https://usepiku.com/privacy",
