@@ -3,13 +3,13 @@ name: owner-tools
 description: Works on a page owner's own Piku account (a creator or a business). Drafts quotes and invoices for their clients, sends a Draft only after the creator says yes, lists and reads Deals and invoices, reads their events and wallet, and prepares designs for their public Piku page. Use when the user sells a service and wants to quote, invoice, check who has paid, see ticket sales or their balance, or change their Piku page.
 ---
 
-# Your Piku account in Claude
+# Your Piku account
 
 Use this when the person you help is a creator billing their own clients, or changing their public Piku page. A creator sells any service: content, tours, code, design, marketing, coaching. Use their words, not Piku's field names.
 
 ## Sign in
 
-These tools act on one creator's account, so the first one you call asks them to sign in to Piku. In Claude Code they run `/mcp`, choose `piku` and authenticate. On Piku they choose what you may do:
+These tools act on one creator's account, so the first one you call asks them to sign in to Piku. In Claude Code they run `/mcp`, choose `piku` and authenticate; in ChatGPT, ChatGPT asks them to connect Piku. On Piku they choose what you may do:
 
 - `billing:read`: Deals, invoices, events and wallet
 - `billing:draft`: make Drafts

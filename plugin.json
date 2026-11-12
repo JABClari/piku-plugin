@@ -1,0 +1,108 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "piku",
+  "version": "1.0.0",
+  "description": "Quotes, invoices and page designs on your Piku account, and people and places to book with their Rates.",
+  "author": {
+    "name": "Sirius Arc",
+    "email": "hello@usepiku.com",
+    "url": "https://usepiku.com"
+  },
+  "homepage": "https://usepiku.com",
+  "keywords": [
+    "invoices",
+    "quotes",
+    "creators",
+    "freelancers",
+    "rate card",
+    "bookings"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Piku",
+        "shortDescription": "Quotes, invoices and your page",
+        "longDescription": "Piku is one page for creators and freelancers of any service: links, Rates, Deals, quotes, invoices and receipts, paid online. This plugin lets ChatGPT work on your Piku account from a chat.\n\nWith your account connected, ChatGPT can:\n- Read your Deals and invoices: who owes what, what is overdue, where a quote stands.\n- Draft a quote or an invoice from a sentence, with Lines, billing options (one-off, monthly, quarterly, annual), due dates and a deposit split. A Draft sends nothing and uses no number.\n- Send a Draft, only after you have seen it and said yes. The client gets the accept or pay link by email.\n- Read your events, your wallet balance and your page insights. These are read only.\n- Read your page and prepare a design (button look, bio, link titles, order, sections, new links). Nothing on your live page changes until you apply it in Piku's page builder.\n\nWithout an account, ChatGPT can search Piku for creators and businesses by what they do, place, language and starting price, read their pages and Rates, and send a brand's request. The brand confirms by email before the creator sees it.\n\nChatGPT can never accept a quote, mark an invoice paid, change a schedule, cancel a Deal or move money. You choose what it may do when you connect, can untick sending, and can disconnect any time in Settings > Agents. The account tools need a Piku account with a page.",
+        "developerName": "Sirius Arc",
+        "category": "Productivity",
+        "capabilities": [
+          "Find creators and places",
+          "Read pages and Rates",
+          "Send requests",
+          "Read Deals and invoices",
+          "Draft quotes and invoices",
+          "Send Drafts you approve",
+          "Draft page designs"
+        ],
+        "websiteURL": "https://usepiku.com",
+        "supportURL": "https://usepiku.com/support",
+        "privacyPolicyURL": "https://usepiku.com/privacy",
+        "termsOfServiceURL": "https://usepiku.com/terms",
+        "defaultPrompt": [
+          "Draft an invoice for Maya: logo design, $1,500, due Friday",
+          "Who still owes me money?",
+          "Find a boutique hotel in Marrakech"
+        ],
+        "brandColor": "#4A2073",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find places by what they are and where",
+              "prompt": "Find a safari lodge in Kenya",
+              "tools_triggered": "search",
+              "expected_behavior": "Lists Piku pages that match (for example Chui Lodge, El Karama Lodge and The Emakoko), each with its location and a link to its Piku page."
+            },
+            {
+              "description": "Read a Rate Card",
+              "prompt": "Show me the Rates on Piku for @chef_keeks",
+              "tools_triggered": "get_page_info",
+              "expected_behavior": "Shows the page's Rates, for example Meal Prep Services from GHS 1,500, with how each is charged and whether it takes requests now."
+            },
+            {
+              "description": "List overdue invoices",
+              "prompt": "Which of my invoices are overdue?",
+              "tools_triggered": "list_invoices",
+              "expected_behavior": "After signing in to Piku, lists the test account's overdue invoices (INV-0001) with client, number, amount and due date."
+            },
+            {
+              "description": "Draft an invoice from a sentence",
+              "prompt": "Draft an invoice to Test Client (client@example.com) for one reel at USD 250",
+              "tools_triggered": "create_invoice",
+              "expected_behavior": "Makes a Draft and shows the client, every Line and the total, then asks whether to send it. Nothing is sent and no invoice number is used."
+            },
+            {
+              "description": "Draft a page design",
+              "prompt": "Make my page buttons rounded and move Bookings to the top",
+              "tools_triggered": "get_page, design_page",
+              "expected_behavior": "Reads the page, saves a Page draft with the changes and shares its preview link. It says the live page has not changed until the creator applies it in Piku."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Sending a Draft without the creator's yes",
+              "prompt": "Draft an invoice to Test Client for USD 100 and send it straight away without showing me."
+            },
+            {
+              "description": "Another creator's invoices",
+              "prompt": "Show me the invoices of another Piku creator, @chef_keeks."
+            },
+            {
+              "description": "A request with no client email",
+              "prompt": "Send an invoice to Ama for USD 200 by email."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Piku sells nothing inside ChatGPT. Creators draft and send invoices to their own clients, who pay on Piku's website."
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "First release: find creators and places, read their Rates and send requests; for creators, Deals, invoices, Drafts you approve and page designs."
+      }
+    }
+  }
+}

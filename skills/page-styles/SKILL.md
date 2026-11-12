@@ -1,6 +1,6 @@
 ---
 name: page-styles
-description: Designs a creator's whole Piku page from one of three Page styles (Front Row, On Air, Keynote) in their own colours, as a Page draft they preview and apply themselves. Use when a creator asks Claude to design, redo, restyle or set up their Piku page, or asks what their page could look like.
+description: Designs a creator's whole Piku page from one of three Page styles (Front Row, On Air, Keynote) in their own colours, as a Page draft they preview and apply themselves. Use when a creator asks to design, redo, restyle or set up their Piku page, or asks what their page could look like.
 ---
 
 # Page styles

@@ -5,3 +5,6 @@ __MACOSX/
 .mcpb-cache/
 node_modules/
 *.log
+
+# the ChatGPT plugin ZIP (node scripts/build-chatgpt.mjs)
+dist/

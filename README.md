@@ -1,6 +1,6 @@
 # Piku for Claude Code
 
-![Piku](icon.png)
+![Piku](assets/icon.png)
 
 [Piku](https://usepiku.com) gives anyone who sells a service one page with a Rate Card, plus quotes, invoices and Deals to get paid. This plugin connects Claude Code to Piku, so you can find people and places to book and send requests, or run your own Piku account from a chat.
 
@@ -64,6 +64,16 @@ Claude can never accept a quote, mark an invoice paid, cancel a Deal or move mon
 - `skills/page-styles`: when you ask for a new page design, Claude offers three styles (Front Row, On Air, Keynote), asks for your colours, and drafts the page from your own links, Rates and events.
 
 The plugin only talks to usepiku.com, and only when Claude calls a Piku tool.
+
+## ChatGPT
+
+The same skills and MCP server also make the Piku plugin for ChatGPT. `plugin.json` and `mcp.json` at the root are its listing and server (OpenAI's Agent Plugins format); `assets/` holds its logo and icon. Build the ZIP with Node:
+
+```
+node scripts/build-chatgpt.mjs
+```
+
+It checks the package against OpenAI's limits and writes `dist/piku-chatgpt-<version>.zip` with only `plugin.json`, `mcp.json`, `skills/` and `assets/`. Add `--check` to check without zipping. The ZIP is submitted at [platform.openai.com/plugins](https://platform.openai.com/plugins).
 
 ## Privacy and support
 
