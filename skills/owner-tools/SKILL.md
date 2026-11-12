@@ -56,7 +56,7 @@ You can never accept a quote, mark an invoice paid, change or stop a Schedule, c
 
 ## The invoice fee
 
-Piku's fee is 1% of each paid invoice, never more than $10, paid by the client by default; the creator can choose to cover it in Settings. The client sees it as a Service fee on the invoice. The payment provider's processing fee is separate and shown at checkout. Invoices are in the creator's currency. The client pays in that currency where checkout takes it, otherwise in USD at the day's rate; the wallet keeps the invoice's currency.
+Piku adds a service fee to each paid invoice, shown on the invoice. The client pays it by default; the creator can choose to cover it in Settings. The client sees it as a Service fee on the invoice. The payment provider's processing fee is separate and shown at checkout. Invoices are in the creator's currency. The client pays in that currency where checkout takes it, otherwise in USD at the day's rate; the wallet keeps the invoice's currency.
 
 ## Deals and invoices
 
